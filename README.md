@@ -27,6 +27,13 @@ Built especially for students of **Theory of Computation (TOC)**, this tool make
 ---
 
 
+## 🎥 Watch DFA in Action  
+
+https://github.com/user-attachments/assets/a80bc419-761f-4316-9c37-50c9b0ecf126
+
+
+<br/>
+
 
 <div>
   <h2><img src="https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Objects/Abacus.png?raw=true" width="35" height="35"> Goal of DFA-Visual </h2>
