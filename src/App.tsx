@@ -11,6 +11,7 @@ import ExampleLoader from './components/ExampleLoader';
 import TabNavigation from './components/TabNavigation';
 import { DFADefinition, SimulationResult } from './types/dfa';
 import { validateDFA, simulateDFA } from './utils/dfaLogic';
+import NotFoundPage from './components/NotFound';
 
 type TabType = 'manual' | 'regex';
 
@@ -128,10 +129,15 @@ function App() {
     handleDFASubmit(dfaDefinition, 'regex');
   }, [handleDFASubmit]);
 
+  const currentPath = window.location.pathname;
+
+  // Example of your defined paths
+  const validPaths = ["/", "/about", "/contact"];
+
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <Header />
-      
+      {validPaths.includes(currentPath) ? (
       <main className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -181,7 +187,9 @@ function App() {
           </div>
         </motion.div>
       </main>
-      
+      ) : (
+        <NotFoundPage />
+      )}
       <Footer />
     </div>
   );
