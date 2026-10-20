@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faBookOpen, faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faBookOpen, faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Footer: React.FC = () => {
@@ -117,34 +117,30 @@ const Footer: React.FC = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-700/50 mt-8 pt-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            {/* Made with Love */}
+            {/* Creator credit */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex items-center space-x-2 text-gray-400"
+              className="flex items-center gap-2 text-gray-400"
             >
-              <span className="text-sm">Made with</span>
-              <motion.div
-                animate={{ 
-                  scale: [1, 1.2, 1],
-                  color: ['#ef4444', '#ec4899', '#8b5cf6', '#ef4444']
-                }}
-                transition={{ 
-                  duration: 2, 
-                  repeat: Infinity, 
-                  ease: "easeInOut" 
-                }}
-              >
-                <FontAwesomeIcon icon={faHeart} className="w-4 h-4 fill-current" />
-              </motion.div>
+              <span className="text-sm">Designed &amp; developed</span>
               <span className="text-sm">by</span>
-              <a
-                href="https://github.com/mdazfar2"
+              <motion.a
+                href="https://azfaralam.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cyber-400 font-medium hover:underline"
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.96 }}
+                aria-label="Visit Azfar Alam's website"
+                className="inline-flex h-7 w-7 shrink-0 items-center justify-center"
               >
-                Azfar Alam
-              </a>
+                <img
+                  src="/Azfar-fevico.webp"
+                  alt="Azfar Alam"
+                  width="28"
+                  height="28"
+                  className="h-full w-full object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
+                />
+              </motion.a>
             </motion.div>
 
             {/* Tech Stack */}
